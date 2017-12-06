@@ -9,11 +9,50 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
+<style>
 
+input[type=submit]{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+input[type=submit]:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+input[type=submit]:before,input[type=submit]:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+input[type=submit]:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+input[type=submit]:hover:before,input[type=submit]:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+</style>
 </head>
 <body>
 	<sf:form method="post"
-		action="${pageContext.request.contextPath}/doCreateCourse"
+		action="${pageContext.request.contextPath}/viewCourse/doCreateCourse"
 		modelAttribute="course">
 		<!-- application context root -->
 		<table border="1" cellpadding="10"
@@ -39,7 +78,7 @@
 					<td>${course.semester}</td>
 				</tr>
 				<tr>
-					<td class="label">Semester:</td>
+					<td class="label">Grade:</td>
 					<td>${course.grade}</td>
 				</tr>
 				<tr>
@@ -64,6 +103,6 @@
 			</tbody>
 		</table>
 	</sf:form>
-	<a href="/course/" class="btn btn-info" role="button">Home</a>
+	<a href="/course/">Home</a>
 </body>
 </html>

@@ -25,7 +25,7 @@ public class Course {
 	@Size(min=7, max=7, message="courseCode must be 7 chars")
 	@NotEmpty(message="The courseCode address cannot be empty")
 	private String courseCode;
-	@Size(min=1, max=15, message="courseCode must be between 1 and 15 chars")
+	@Size(min=1, max=20, message="courseName must be between 1 and 20 chars")
 	@NotEmpty(message="The courseName address cannot be empty")
 	private String courseName;
 	private String division;

@@ -25,13 +25,14 @@ th, td {
 		<caption>2018년 신청 학점 내역</caption>
 		<thead>
 			<tr>
-				<th>hansungID</th>
-				<th>hansungName</th>
-				<th>year</th>
-				<th>semester</th>
-				<th>courseName</th>
-				<th>division</th>
-				<th>grade</th>
+				<th>HansungID</th>
+				<th>HansungName</th>
+				<th>Year</th>
+				<th>Semester</th>
+				<th>CourseName</th>
+				<th>CourseCode</th>
+				<th>Division</th>
+				<th>Grade</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -43,6 +44,7 @@ th, td {
 					<td><c:out value="${courses.year}"></c:out></td>
 					<td><c:out value="${courses.semester}"></c:out></td>
 					<td><c:out value="${courses.courseName}"></c:out></td>
+					<td><c:out value="${courses.courseCode}"></c:out></td>
 					<td><c:out value="${courses.division}"></c:out></td>
 					<td><c:out value="${courses.grade}"></c:out></td>
 				</tr>

@@ -14,7 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Hello world!</h1>
+	<h1>반갑습니다!</h1>
 
 	<p>
 		<a
