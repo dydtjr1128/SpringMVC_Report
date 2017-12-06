@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+body{
+	margin: 20px;
+}
+th, td {
+	text-align: center;
+}
+
+#mytable {
+	width: 50%;
+}
