@@ -12,7 +12,7 @@
 <body>
 	${course.hansungName}님 등록에 성공하였습니다. <br/>
 
-<a href="${pageContext.request.contextPath}/viewCourse/showCourseByNextSemester">click here to view current offers</a><br/>
-<a href="/course/"  class="btn btn-info" role="button">Home</a>
+<a href="${pageContext.request.contextPath}/showCourseByNextSemester">click here to view current offers</a><br/>
+<a href="/course"  class="btn btn-info" role="button">Home</a>
 </body>
 </html>

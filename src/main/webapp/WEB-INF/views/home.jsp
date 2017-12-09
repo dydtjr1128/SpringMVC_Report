@@ -18,22 +18,22 @@
 
 	<p>
 		<a
-			href="${pageContext.request.contextPath}/viewCourse/showCourseBySemester"
+			href="${pageContext.request.contextPath}/showCourseBySemester"
 			class="btn btn-info" role="button">Show Course By Semester and
 			year</a>
 	</p>
 	<p>
 		<a
-			href="${pageContext.request.contextPath}/viewCourse/showCourseByDivision"
+			href="${pageContext.request.contextPath}/showCourseByDivision"
 			class="btn btn-info" role="button">Show Course By Division</a>
 	</p>
 	<p>
-		<a href="${pageContext.request.contextPath}/viewCourse/createCourse"
+		<a href="${pageContext.request.contextPath}/createCourse"
 			class="btn btn-info" role="button">Create 2018 Course</a>
 	</p>
 	<p>
 		<a
-			href="${pageContext.request.contextPath}/viewCourse/showCourseByNextSemester"
+			href="${pageContext.request.contextPath}/showCourseByNextSemester"
 			class="btn btn-info" role="button">Show Course By Next(2018-1)
 			Semester</a>
 	</p>

@@ -52,7 +52,7 @@ input[type=submit]:hover:before,input[type=submit]:hover:after{
 </head>
 <body>
 	<sf:form method="post"
-		action="${pageContext.request.contextPath}/viewCourse/doCreateCourse"
+		action="${pageContext.request.contextPath}/doCreateCourse"
 		modelAttribute="course">
 		<!-- application context root -->
 		<table border="1" cellpadding="10"
@@ -103,6 +103,6 @@ input[type=submit]:hover:before,input[type=submit]:hover:after{
 			</tbody>
 		</table>
 	</sf:form>
-	<a href="/course/">Home</a>
+	<a href="/course">Home</a>
 </body>
 </html>

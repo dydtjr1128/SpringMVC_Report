@@ -23,13 +23,11 @@
 			access="permitAll" />
 		<security:intercept-url pattern="/logout"
 			access="permitAll" />
-		<security:intercept-url pattern="/viewCourse/**"
-			access="isAuthenticated()" />
-		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/" access="isAuthenticated()" />
 
-		<security:intercept-url pattern="/home" access="permitAll" />
+		<!-- <security:intercept-url pattern="/home" access="permitAll" />
 		<security:intercept-url pattern="/resources/css/**"
-			access="permitAll" />
+			access="permitAll" /> -->
 		<!-- <security:intercept-url pattern="/**" access="denyAll" /> -->
 	</security:http>
 

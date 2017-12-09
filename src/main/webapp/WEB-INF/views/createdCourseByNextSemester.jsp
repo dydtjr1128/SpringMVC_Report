@@ -51,6 +51,6 @@ th, td {
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="/course/"  class="btn btn-info" role="button">Home</a>
+	<a href="/course"  class="btn btn-info" role="button">Home</a>
 </body>
 </html>

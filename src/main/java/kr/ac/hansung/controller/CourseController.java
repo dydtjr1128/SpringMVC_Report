@@ -22,7 +22,7 @@ public class CourseController {
 	@Autowired
 	private CourseService courseService;
 	
-	@RequestMapping("/viewCourse/showCourseBySemester")
+	@RequestMapping("/showCourseBySemester")
 	public String showCourseBySemester(Model model) {
 		List<CourseBySemester> courseBySemesters = courseService.getCourseBySemester();
 	/*	for(int i=0; i<courseBySemesters.size(); i++) {
@@ -31,32 +31,32 @@ public class CourseController {
 		}*/
 		model.addAttribute("courseBySemesters", courseBySemesters);
 
-		return "viewCourse/createdCourseBySemester";
+		return "createdCourseBySemester";
 	}
-	@RequestMapping("/viewCourse/showCourseBySemesterDetail")
+	@RequestMapping("/showCourseBySemesterDetail")
 	public String showCourseBySemesterDetail(@RequestParam("year") int year,@RequestParam("semester") int semester,Model model) {
 		System.out.println(year + " " + semester);
 		List<Course> courses = courseService.getCourseBySemesterDetail(year, semester);
 		model.addAttribute("courses", courses);
-		return "viewCourse/createdCourseBySemesterDetail";
+		return "createdCourseBySemesterDetail";
 	}
-	@RequestMapping("/viewCourse/showCourseByDivision")
+	@RequestMapping("/showCourseByDivision")
 	public String showCourseByDivision(Model model) {
 		List<CourseByDivision> courseByDivisions = courseService.getCourseByDivision();
 	
 		model.addAttribute("courseByDivisions", courseByDivisions);
-		return "viewCourse/createdCourseByDivision";
+		return "createdCourseByDivision";
 	}
-	@RequestMapping("/viewCourse/createCourse")
+	@RequestMapping("/createCourse")
 	public String createCourse(Model model) {
 		Course course = new Course();
 		course.setGrade(3);		
 		course.setSemester(1);
 		course.setYear(2018);
 		model.addAttribute("course", course);
-		return "viewCourse/createCourse";
+		return "createCourse";
 	}
-	@RequestMapping("/viewCourse/doCreateCourse")
+	@RequestMapping("/doCreateCourse")
 	public String doCreateCourse(Model model,@Valid Course course, BindingResult result) {
 		course.setGrade(3);		
 		course.setSemester(1);
@@ -67,19 +67,19 @@ public class CourseController {
 			List<ObjectError> errors = result.getAllErrors();
 			for(ObjectError error : errors)
 				System.out.println(error.getDefaultMessage());
-			return "viewCourse/createCourse";
+			return "createCourse";
 		}
 		
 		courseService.insert(course);
-		return "viewCourse/createdCourse";
+		return "createdCourse";
 	}
-	@RequestMapping("/viewCourse/showCourseByNextSemester")
+	@RequestMapping("/showCourseByNextSemester")
 	public String courseByNextSemester(Model model) {
 		List<Course> courses = courseService.getCourseByNextSemester();		
 		model.addAttribute("courses", courses);	
 	
 		
-		return "viewCourse/createdCourseByNextSemester";
+		return "createdCourseByNextSemester";
 	}
 	
 	
